@@ -4,7 +4,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import Login from './components/Auth/Login.js';
 import Register from './components/Auth/Register.js';
-import DashBoard from './components/DashBoard/DashBoard';
+import Board from './components/DashBoard/DashBoard';
 import 'semantic-ui-css/semantic.min.css';
 import firebase from './firebase';
 import {Provider, connect} from 'react-redux';
@@ -14,7 +14,7 @@ import {setUser, clearUser} from './actions';
 //import Spinner from './spinner.js';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {BrowserRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
-
+import "circular-std";
 
 const store = createStore(rootReducer, composeWithDevTools());
 
@@ -44,9 +44,8 @@ class Root extends Component {
 		
 	return(
 		<div>
-		<Route path="/dashboard" component={DashBoard} />
 		<Switch>
-			
+			<Route path="/dashboard" component={Board} />
 			<Route exact path="/" component={App} />
 			<Route path="/login" component={Login} />
 			<Route path="/register" component={Register} />

@@ -43,13 +43,13 @@ class Root extends Component {
 	render() {
 		
 	return(
-		<div>
-		<Switch>
-			<Route path="/dashboard" component={Board} />
-			<Route exact path="/" component={App} />
-			<Route path="/login" component={Login} />
-			<Route path="/register" component={Register} />
-		</Switch>
+		<div className="fluid-container">
+				<Switch>
+					<Route path="/login" component={Login} />
+					<Route path="/register" component={Register} />
+					<Route path="/app" component={App} />
+					<Route exact path="/" component={Board} />
+				</Switch>
 		</div>
 	);
 }

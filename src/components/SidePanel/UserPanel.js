@@ -14,7 +14,7 @@ state = {
 dropdownOptions = () => [
 	{
 		key: 'user',
-		text: <span>Signed in as <strong>John</strong></span>,
+		text: <span>Signed in as <strong>Aman</strong></span>,
 		disabled: true
 	},
 	{
@@ -63,7 +63,7 @@ const {user} = this.state;
 						<Header style={{padding: '0.25em'}} as="h4" inverted>
 							<Dropdown trigger={
 								<span>
-									John
+									Aman
 								</span>
 							} options={this.dropdownOptions()} />
 

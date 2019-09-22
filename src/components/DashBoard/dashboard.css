@@ -29,7 +29,7 @@ body, #topbar{
     line-height: 48px;
     font-size: 50px;
     opacity: .7;
-    color: orange;
+    color: #ffb848;
   }
   
   .curly-quotes:before {
@@ -50,7 +50,6 @@ body, #topbar{
     border: 1px solid #ffb848;
     border-top-left-radius: 2em;
     border-bottom-left-radius: 2em;
-    z-index: -1;
 }
 
 .Cards {

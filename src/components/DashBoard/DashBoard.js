@@ -4,6 +4,7 @@ import "circular-std";
 import './dashboard.css';
 import logo1 from'./Group6.svg';
 import logo2 from './group14.svg';
+import { Link } from 'react-router-dom';
 
 const user = "Aman";
 const author1 = "Ananya Mishra";
@@ -18,14 +19,14 @@ class Board extends React.Component {
     }
     render() {
         return (
-            <div className="Main">
+            <div >
                 <NavigationBar />
                 <div className="container-fluid">
                     <Row>
                         <Col md={8}>
                             <Welcome />
                         </Col>
-                        <Col id="hotweek">
+                        <Col id="hotweek" >
                             <h3>What's happening around you?</h3>
                             <Cards />
                             <p id="space"></p>
@@ -63,15 +64,15 @@ class NavigationBar extends React.Component {
     }
     render() {
         return (
-            <div className="main">
+            <div className="fluid-container">
                 <Navbar collapseOnSelect expand="lg" bg="white" id="topbar">
                     <Navbar.Brand href="#home" className="nav navbar-nav pull-sm-left"><img src={require('./logo.png')} height="56" width="56" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
 
-                            <Nav.Link href="#Dashboard" id="dash" style={{ paddingRight: "5em" }}>Dashboard</Nav.Link>
-                            <Nav.Link href="#MyCommunities" id="Myc" style={{ paddingRight: "5em" }}>My Communities</Nav.Link>
+                            <Nav.Link href="#Dashboard" id="dash" style={{ paddingRight: "5em" }}><Link to = "/">Dashboard</Link></Nav.Link>
+                            <Nav.Link href="" id="Myc" style={{ paddingRight: "5em" }}><Link to = "/app">My Communities</Link></Nav.Link>
                             <Nav.Link href="#Talktoafriend" id="talk" style={{ paddingRight: "5em" }}>Talk to a friend</Nav.Link>
                         </Nav>
                         <Nav id="profile">
@@ -102,7 +103,7 @@ class Cards extends React.Component {
         return this.state.News.map((News, index) => {
             const { title, body, imgloc } = News;
             return (
-                <Card style={{ width: '25em', height: '17em' }} className="Cards">
+                <Card style={{ width: '25em', height: '17.5em' }} className="Cards">
                     <Card.Img variant="top" src={imgloc} style={{paddingLeft: "0.5em", paddingTop: "0.5em", paddingRight: "0.5em"}}/>
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>

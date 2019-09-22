@@ -120,7 +120,7 @@ const {username, email, password, passwordConfirmation, loading, errors} = this.
 					textAlign="center">
 					<Icon name="puzzle piece" 
 						color="orange" />
-					Register for URSANOVA
+					Register for OTTER
 				</Header>
 			<Form size="large" onSubmit={this.handleSubmit}>
 				<Segment stacked>
